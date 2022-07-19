@@ -1,0 +1,10 @@
+.info__bc-container {
+  border: #1088E2 1px solid;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}

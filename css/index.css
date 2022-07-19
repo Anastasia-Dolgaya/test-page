@@ -1,0 +1,51 @@
+/* fonts */
+@import url(./../fonts/roboto/roboto.css);
+@import url(./../fonts/open-sans/open-sans.css);
+@import url(./../fonts/Linearicons-Free/Linearicons-Free.css);
+
+@import url(./blocks/body/body.css);
+@import url(./blocks/main/main.css);
+/* mix-clases */
+@import url(./blocks/lnr/lnr.css);
+@import url(./blocks/title/title.css);
+@import url(./blocks/subtitle/subtitle.css);
+@import url(./blocks/margin/margin.css);
+@import url(./blocks/gap/gap-15.css);
+@import url(./blocks/gap/gap-10.css);
+@import url(./blocks/gap/gap-5.css);
+/* side menu */
+@import url(./blocks/navigation/navigation.css);
+@import url(./blocks/navigation/__link/navigation__link.css);
+/* filter column */
+@import url(./blocks/container/container.css);
+@import url(./blocks/info/info.css);
+@import url(./blocks/info/__container/info__container.css);
+@import url(./blocks/info/__briefcase/info__briefcase.css);
+@import url(./blocks/info/__bc-container/info__bc-container.css);
+/* form */
+@import url(./blocks/form/__fields/form__fields.css);
+@import url(./blocks/form/__title/form__title.css);
+@import url(./blocks/form/__buttons-container/form__buttons-container.css);
+@import url(./blocks/form/__tick-btn/form__tick-btn.css);
+@import url(./blocks/form/__cross-btn/form__cross-btn.css);
+@import url(./blocks/form/__unit/form__unit.css);
+@import url(./blocks/form/__label/form__label.css);
+@import url(./blocks/form/__container/form__container.css);
+@import url(./blocks/form/__container/_content/form__container_content_btn.css);
+@import url(./blocks/form/__text/form__text.css);
+@import url(./blocks/form/__button/form__button.css);
+@import url(./blocks/form/__block/form__block.css);
+@import url(./blocks/form/__down-btn/form__down-btn.css);
+@import url(./blocks/form/__canceal-btn/form__canceal-btn.css);
+@import url(./blocks/form/__fieldset/form__fieldset.css);
+@import url(./blocks/form/__dot/form__dot.css);
+@import url(./blocks/form/__dot/_active/form__dot_active.css);
+@import url(./blocks/form/__block-title/form__block-title.css);
+@import url(./blocks/form/__plus-btn/form__plus-btn.css);
+@import url(./blocks/form/__plus-btn/_place/form__plus-btn_place_group.css);
+@import url(./blocks/form/__add/form__add.css);
+@import url(./blocks/form/__clear/form__clear.css);
+@import url(./blocks/form/__apply-btn/form__apply-btn.css);
+@import url(./blocks/form/__square-apply-btn/form__square-apply-btn.css);
+@import url(./blocks/form/__square-clear-btn/form__square-clear-btn.css);
+

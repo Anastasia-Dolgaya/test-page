@@ -1,0 +1,7 @@
+.navigation {
+  background-color: #204B6F;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  padding-top: 11px;
+}

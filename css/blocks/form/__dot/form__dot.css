@@ -1,0 +1,7 @@
+.form__dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50px;
+  background-color: #DEE7EB;
+  margin: 1px;
+}
