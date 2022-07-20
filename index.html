@@ -43,8 +43,8 @@ Eva Engage</a>
             <div class="form__container">
               <h2 class="form__title title">Edit filter</h2>
               <div class="form__buttons-container">
-                <button type="submit" class="form__button lnr lnr-checkmark-circle form__tick-btn"></button>
-                <button type="button" class="form__button lnr lnr-cross-circle form__cross-btn"></button>
+                <button type="submit" class="form__button lnr lnr-checkmark-circle form__button_content_tick"></button>
+                <button type="button" class="form__button lnr lnr-cross-circle form__button_content_cross"></button>
               </div>
             </div>
 
@@ -69,165 +69,180 @@ Eva Engage</a>
             </fieldset>
 
             <div class="form__block">
-              <div class="form__container">
-                <div class="form__container gap-10">
-                  <button type="button" class="form__button lnr lnr-chevron-down-circle form__down-btn"></button>
-                  <h2 class="title form__block-title">Current salary/rate</h2>
-                </div>
-                <div class="form__container gap-15">
-                  <div class="form__dots form__container">
-                    <div class="form__dot form__dot_active"></div>
-                    <div class="form__dot"></div>
-                    <div class="form__dot"></div>
+              <div class="accordion" id="accordion-salary">
+                <div class="accordion-item form__accordion">
+                  <h2 class="accordion-header form__container margin" id="headingOne">
+                    <div class="form__container gap-10">
+                      <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="accordion-button collapsed form__button lnr lnr-chevron-down-circle form__button_content_down"></button>
+                      <h2 class="title form__block-title">Current salary/rate</h2>
+                    </div>
+                    <div class="form__container gap-15">
+                      <div class="form__dots form__container">
+                        <div class="form__dot form__dot_active"></div>
+                        <div class="form__dot"></div>
+                        <div class="form__dot"></div>
+                      </div>
+                      <button type="button" class="form__button lnr lnr-cross form__button_content_cancel"></button>
+                    </div>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordion-salary">
+                    <div class="accordion-body form__accordion">
+                      <fieldset class="form__fieldset">
+                        <div class="mb-3 form__unit">
+                          <label for="form-salary-select" class="form-label text-uppercase form__label">Desired salary</label>
+                          <select class="form-select form-select-sm form__text" id="form-salary-select" aria-label=".form-select-sm example">
+                            <option selected>In range of</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="row">
+                          <div class="mb-3 form__unit col-6">
+                            <label for="formGroupExampleInput" class="form-label text-uppercase form__label">Min</label>
+                            <input type="text" class="form-control form__text" id="formGroupExampleInput" placeholder="Min">
+                          </div>
+                          <div class="mb-3 form__unit col-6">
+                            <label for="formGroupExampleInput" class="form-label text-uppercase form__label">Max</label>
+                            <input type="text" class="form-control form__text" id="formGroupExampleInput" placeholder="Max">
+                          </div>
+                        </div>
+                        <div class="mb-3 form__unit">
+                          <label for="form-period-select" class="form-label text-uppercase form__label">Period</label>
+                          <select class="form-select form-select-sm form__text" id="form-period-select" aria-label=".form-select-sm">
+                            <option selected>Hour</option>
+                            <option value="1">Day</option>
+                            <option value="2">Month</option>
+                            <option value="3">Year</option>
+                          </select>
+                        </div>
+                      </fieldset>
+
+                        <div class="row g-3 margin">
+                          <div class="col-md-6">
+                            <select class="form-select form-select-sm form__text col-6" id="form-select" aria-label=".form-select-sm">
+                              <option selected>Select</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                          </div>
+                          <div class="form__container col-md-6 gap-5">
+                            <button type="button" class="form__button lnr lnr-plus-circle form__button_content_plus"></button>
+                            <p class="title form__add">Add condition</p>
+                          </div>
+                        </div>
+                    </div>
                   </div>
-                  <button type="button" class="form__button lnr lnr-cross form__canceal-btn"></button>
                 </div>
               </div>
-
-              <fieldset class="form__fieldset">
-                <div class="mb-3 form__unit">
-                  <label for="form-salary-select" class="form-label text-uppercase form__label">Desired salary</label>
-                  <select class="form-select form-select-sm form__text" id="form-salary-select" aria-label=".form-select-sm example">
-                    <option selected>In range of</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="row">
-                  <div class="mb-3 form__unit col-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase form__label">Min</label>
-                    <input type="text" class="form-control form__text" id="formGroupExampleInput" placeholder="Min">
-                  </div>
-                  <div class="mb-3 form__unit col-6">
-                    <label for="formGroupExampleInput" class="form-label text-uppercase form__label">Max</label>
-                    <input type="text" class="form-control form__text" id="formGroupExampleInput" placeholder="Max">
-                  </div>
-                </div>
-                <div class="mb-3 form__unit">
-                  <label for="form-period-select" class="form-label text-uppercase form__label">Period</label>
-                  <select class="form-select form-select-sm form__text" id="form-period-select" aria-label=".form-select-sm example">
-                    <option selected>Hour</option>
-                    <option value="1">Day</option>
-                    <option value="2">Month</option>
-                    <option value="3">Year</option>
-                  </select>
-                </div>
-                </fieldset>
-
-                <div class="row g-3 margin">
-                  <div class="col-md-6">
-                    <select class="form-select form-select-sm form__text col-6" id="form-select" aria-label=".form-select-sm example">
-                      <option selected>Select</option>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </select>
-                  </div>
-                  <div class="form__container col-md-6 gap-5">
-                    <button type="button" class="form__button lnr lnr-plus-circle form__plus-btn"></button>
-                    <p class="title form__add">Add condition</p>
-                  </div>
-                </div>
             </div>
 
             <div class="form__block">
-              <div class="form__container">
-                <div class="form__container gap-10">
-                  <button type="button" class="form__button lnr lnr-chevron-down-circle form__down-btn"></button>
-                  <h2 class="title form__block-title">Languages</h2>
-                </div>
-                <div class="form__container gap-15">
-                  <div class="form__dots form__container">
-                    <div class="form__dot form__dot_active"></div>
-                    <div class="form__dot"></div>
-                    <div class="form__dot"></div>
+              <div class="accordion" id="accordion-language">
+                <div class="accordion-item form__accordion">
+                  <h2 class="accordion-header form__container margin" id="headingTwo">
+                    <div class="form__container gap-10">
+                      <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="accordion-button collapsed form__button lnr lnr-chevron-down-circle form__button_content_down"></button>
+                      <h2 class="title form__block-title">Languages</h2>
+                    </div>
+                    <div class="form__container gap-15">
+                      <div class="form__dots form__container">
+                        <div class="form__dot form__dot_active"></div>
+                        <div class="form__dot"></div>
+                        <div class="form__dot"></div>
+                      </div>
+                      <button type="button" class="form__button lnr lnr-cross form__button_content_cancel"></button>
+                    </div>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-salary">
+                    <div class="accordion-body form__accordion">
+                      <fieldset class="form__fieldset">
+                        <div class="mb-3 form__unit">
+                          <label for="form-lang-select" class="form-label text-uppercase form__label">Language</label>
+                          <select class="form-select form-select-sm form__text" id="form-lang-select" aria-label=".form-select-sm">
+                            <option value="English" selected>English</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Russian">Russian</option>
+                          </select>
+                        </div>
+                        <div class="mb-3 form__unit">
+                          <label for="form-proficiency-select" class="form-label text-uppercase form__label">Proficiency</label>
+                          <select class="form-select form-select-sm form__text" id="form-proficiency-select" aria-label=".form-select-sm">
+                            <option selected value="Professional working proficiency">Professional working proficiency</option>
+                            <option value="Native or bilingual proficiency">Native or bilingual proficiency</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Intermediate">Intermediate</option>
+                          </select>
+                        </div>
+                        </fieldset>
+
+                        <div class="form__container row g-3 margin">
+                          <div class="col-md-6">
+                            <select class="form-select form-select-sm form__text col-md-6" id="form-select" aria-label=".form-select-sm">
+                              <option value="Or" selected>Or</option>
+                              <option value="And">And</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 form__container">
+                            <button type="button" class="form__button lnr lnr-cross form__button_content_cancel"></button>
+                            <p class="form__clear title">Clear condition</p>
+                          </div>
+                        </div>
+
+                        <fieldset class="form__fieldset">
+                          <div class="mb-3 form__unit">
+                            <label for="form-lang-select" class="form-label text-uppercase form__label">Language</label>
+                            <select class="form-select form-select-sm form__text" id="form-lang-select" aria-label=".form-select-sm">
+                              <option value="English">English</option>
+                              <option value="French" selected>French</option>
+                              <option value="German">German</option>
+                              <option value="Russian">Russian</option>
+                            </select>
+                          </div>
+                          <div class="mb-3 form__unit">
+                            <label for="form-proficiency-select" class="form-label text-uppercase form__label">Proficiency</label>
+                            <select class="form-select form-select-sm form__text" id="form-proficiency-select" aria-label=".form-select-sm">
+                              <option value="Professional working proficiency">Professional working proficiency</option>
+                              <option selected value="Native or bilingual proficiency">Native or bilingual proficiency</option>
+                              <option value="Advanced">Advanced</option>
+                              <option value="Intermediate">Intermediate</option>
+                            </select>
+                          </div>
+                          </fieldset>
+
+                          <div class="row g-3 margin">
+                            <div class="col-md-6">
+                              <select class="form-select form-select-sm form__text col-6" id="form-select" aria-label=".form-select-sm">
+                                <option selected>Select</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                              </select>
+                            </div>
+                            <div class="form__container col-md-6 gap-5">
+                              <button type="button" class="form__button lnr lnr-plus-circle form__button_content_plus"></button>
+                              <p class="title form__add">Add condition</p>
+                            </div>
+                          </div>
+                    </div>
                   </div>
-                  <button type="button" class="form__button lnr lnr-cross form__canceal-btn"></button>
                 </div>
               </div>
-
-              <fieldset class="form__fieldset">
-                <div class="mb-3 form__unit">
-                  <label for="form-lang-select" class="form-label text-uppercase form__label">Language</label>
-                  <select class="form-select form-select-sm form__text" id="form-lang-select" aria-label=".form-select-sm example">
-                    <option value="English" selected>English</option>
-                    <option value="French">French</option>
-                    <option value="German">German</option>
-                    <option value="Russian">Russian</option>
-                  </select>
-                </div>
-                <div class="mb-3 form__unit">
-                  <label for="form-proficiency-select" class="form-label text-uppercase form__label">Proficiency</label>
-                  <select class="form-select form-select-sm form__text" id="form-proficiency-select" aria-label=".form-select-sm example">
-                    <option selected value="Professional working proficiency">Professional working proficiency</option>
-                    <option value="Native or bilingual proficiency">Native or bilingual proficiency</option>
-                    <option value="Advanced">Advanced</option>
-                    <option value="Intermediate">Intermediate</option>
-                  </select>
-                </div>
-                </fieldset>
-
-                <div class="form__container row g-3 margin">
-                  <div class="col-md-6">
-                    <select class="form-select form-select-sm form__text col-md-6" id="form-select" aria-label=".form-select-sm example">
-                      <option value="Or" selected>Or</option>
-                      <option value="And">And</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 form__container">
-                    <button type="button" class="form__button lnr lnr-cross form__canceal-btn"></button>
-                    <p class="form__clear title">Clear condition</p>
-                  </div>
-                </div>
-
-                <fieldset class="form__fieldset">
-                  <div class="mb-3 form__unit">
-                    <label for="form-lang-select" class="form-label text-uppercase form__label">Language</label>
-                    <select class="form-select form-select-sm form__text" id="form-lang-select" aria-label=".form-select-sm example">
-                      <option value="English">English</option>
-                      <option value="French" selected>French</option>
-                      <option value="German">German</option>
-                      <option value="Russian">Russian</option>
-                    </select>
-                  </div>
-                  <div class="mb-3 form__unit">
-                    <label for="form-proficiency-select" class="form-label text-uppercase form__label">Proficiency</label>
-                    <select class="form-select form-select-sm form__text" id="form-proficiency-select" aria-label=".form-select-sm example">
-                      <option value="Professional working proficiency">Professional working proficiency</option>
-                      <option selected value="Native or bilingual proficiency">Native or bilingual proficiency</option>
-                      <option value="Advanced">Advanced</option>
-                      <option value="Intermediate">Intermediate</option>
-                    </select>
-                  </div>
-                  </fieldset>
-
-                  <div class="row g-3 margin">
-                    <div class="col-md-6">
-                      <select class="form-select form-select-sm form__text col-6" id="form-select" aria-label=".form-select-sm example">
-                        <option selected>Select</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                      </select>
-                    </div>
-                    <div class="form__container col-md-6 gap-5">
-                      <button type="button" class="form__button lnr lnr-plus-circle form__plus-btn"></button>
-                      <p class="title form__add">Add condition</p>
-                    </div>
-                  </div>
             </div>
+
             <fieldset class="row g-3 form__container">
               <div class="mb-3 form__unit col-md-11">
                 <label for="form-filter-group-select" class="form-label text-uppercase form__label">Add filter group</label>
-                <select class="form-select form-select-sm form__text" id="form-filter-group-select" aria-label=".form-select-sm example">
+                <select class="form-select form-select-sm form__text" id="form-filter-group-select" aria-label=".form-select-sm">
                   <option selected>Select filter group</option>
                   <option value="1">Option 1</option>
                   <option value="2">Option 2</option>
                   <option value="3">Option 3</option>
                 </select>
               </div>
-              <button type="button" class="form__button lnr lnr-plus-circle form__plus-btn form__plus-btn_place_group"></button>
+              <button type="button" class="form__button lnr lnr-plus-circle form__button_content_plus form__button_place_group"></button>
             </fieldset>
           </div>
 

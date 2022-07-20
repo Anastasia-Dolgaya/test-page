@@ -1,0 +1,40 @@
+.form__button_content_down {
+  color: #96ACBF;
+  font-size: 14px;
+  background-color: white;
+  outline: none;
+  background-image: none;
+}
+
+.form__button_content_down::before {
+  transition: transform .2s ease-in-out;
+}
+
+.form__button_content_down:not(.collapsed)::before {
+  transform: rotate(-180deg);
+}
+
+.accordion-button::after {
+  width: 0;
+  height: 0;
+  margin-left: 0;
+  content: "";
+  background-image: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: none;
+  transform: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #96ACBF;
+  background-color: white;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border: none;
+  box-shadow: none;
+}
